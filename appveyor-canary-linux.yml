@@ -28,12 +28,8 @@ for:
       - sh: "./aws_cli/bin/python -m pip install awscli"
       - sh: "PATH=$(echo $PWD'/aws_cli/bin'):$PATH"
 
-      - sh: "sudo apt-get -y install python3.6"
-      - sh: "sudo apt-get -y install python2.7"
-      - sh: "sudo apt-get -y install python3.7"
-      - sh: "sudo apt-get -y install python3.8"
-
-      - sh: "which python3.7"
+      - sh: "which python"
+      - sh: "echo $PATH"
 
       - sh: "PATH=$PATH:/usr/bin/python3.8:/usr/bin/python3.7:/usr/bin/python3.6:/usr/bin/python2.7"
       - sh: "curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py"
