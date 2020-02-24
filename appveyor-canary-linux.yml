@@ -45,5 +45,4 @@ for:
 #      - sh: curl -sflL 'https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-ssh.sh' | bash -e -
 
 
-      - sh: "pytest -vv tests/integration/buildcmd"
       - sh: "pytest -vv tests/integration/init/schemas"
