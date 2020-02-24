@@ -23,6 +23,7 @@ for:
 
     install:
       # Install AWS CLI
+      - sh: "mkdir -p ~/.aws-sam"
       - sh: "ls -la ~"
       - sh: "source ${HOME}/venv${PYTHON_VERSION}/bin/activate"
       - sh: "virtualenv aws_cli"
