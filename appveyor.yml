@@ -130,6 +130,7 @@ for:
       # Runs only in Linux
 #      - sh: "pytest -vv tests/integration"
       - sh: "pytest -vv tests/integration/init/schemas"
+      - sh: "sleep 45m"
 #      - sh: "pytest -vv tests/regression"
 #      - sh: "/tmp/black --check setup.py tests samcli scripts"
 
