@@ -126,13 +126,13 @@ for:
 #      - "pytest -n 4 tests/functional"
       - sh: "python --version"
       - sh: "which python"
-      - sh: curl -sflL 'https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-ssh.sh' | bash -e -
+#      - sh: curl -sflL 'https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-ssh.sh' | bash -e -
 
 
       # Runs only in Linux
 #      - sh: "pytest -vv tests/integration"
+      - sh: "pytest -vv tests/integration/telemetry"
       - sh: "pytest -vv tests/integration/init/schemas"
-      - sh: "sleep 45m"
 #      - sh: "pytest -vv tests/regression"
 #      - sh: "/tmp/black --check setup.py tests samcli scripts"
 
