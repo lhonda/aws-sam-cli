@@ -32,9 +32,6 @@ for:
       - sh: "which pip"
       - sh: "echo $PATH"
 
-      - sh: "PATH=$PATH:/usr/bin/python3.8:/usr/bin/python3.7:/usr/bin/python3.6:/usr/bin/python2.7"
-      - sh: "curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py"
-
       - sh: "sudo apt-get -y install python3-distutils"
 
     build_script:
@@ -47,4 +44,5 @@ for:
 #      - sh: curl -sflL 'https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-ssh.sh' | bash -e -
 
 
-      - sh: "pytest -vv tests/integration/init/schemas/"
+      - sh: "pytest -vv tests/integration/buildcmd"
+      - sh: "pytest -vv tests/integration/init/schemas"
