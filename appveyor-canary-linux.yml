@@ -23,14 +23,14 @@ for:
 
     install:
       # Install AWS CLI
-      - sh: "virtualenv aws_cli"
-      - sh: "./aws_cli/bin/python -m pip install awscli"
-      - sh: "PATH=$(echo $PWD'/aws_cli/bin'):$PATH"
-
       - sh: "sudo apt-get -y install python3.8"
       - sh: "sudo apt-get -y install python3.7"
       - sh: "sudo apt-get -y install python3.6"
       - sh: "sudo apt-get -y install python2.7"
+        -
+      - sh: "virtualenv aws_cli"
+      - sh: "./aws_cli/bin/python -m pip install awscli"
+      - sh: "PATH=$(echo $PWD'/aws_cli/bin'):$PATH"
 
       - sh: "which python3.7"
 
